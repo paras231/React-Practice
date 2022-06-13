@@ -1,16 +1,36 @@
-import React from "react";
-import { useTimeout } from "beautiful-react-hooks";
+import { useContext } from "react";
+import { ThemeContext } from "./Context/ThemeContext";
+import Home from "./Components/Home";
+import "./App.css";
 
 const App = () => {
-  const [show, setShow] = React.useState(false);
-  useTimeout(() => {
-    setShow(true);
-  }, 3000);
-  return ( 
+  // dark theme logic
+  const theme = useContext(ThemeContext);
+
+  const darkMode = theme.state.darkMode;
+
+  const handleClick = () => {
+    if (darkMode) {
+      theme.dispatch({
+        type: "LIGHT_MODE",
+      });
+    } else {
+      theme.dispatch({
+        type: "DARK_MODE",
+      });
+    }
+  };
+  return (
     <>
-      <h1>
-        Content will show in 3 sec... :{show && <p>This is a paragraph tag</p>}
-      </h1>
+      <div
+        style={{ margin: 0, padding: 0 }}
+        className={darkMode ? "dark" : "light"}
+      >
+        <p>HELLO WORLD</p>
+
+        <Home />
+      </div>
+      <button onClick={handleClick}>Click me</button>
     </>
   );
 };
