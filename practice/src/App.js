@@ -6,7 +6,7 @@ const App = () => {
   useTimeout(() => {
     setShow(true);
   }, 3000);
-  return (
+  return ( 
     <>
       <h1>
         Content will show in 3 sec... :{show && <p>This is a paragraph tag</p>}
