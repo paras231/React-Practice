@@ -6,7 +6,7 @@ const initialState = {
 };
 
 // create a context
-export const ThemeContext = createContext();
+export const ThemeContext = createContext(initialState);
 
 // create a provider which will be used to wrap our app
 export const ThemeProvider = ({ children }) => {
