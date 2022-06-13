@@ -7,3 +7,7 @@ Created this app to get practice of followins->
 3. saved the theme in localStorage to get the previous saved theme.
 
 4. Installed the react custom hooks package to use custom hooks.
+
+5. Created Lazy loading components using loadable components package.
+
+6.
