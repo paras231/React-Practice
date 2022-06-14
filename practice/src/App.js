@@ -1,11 +1,13 @@
-import React, { useContext,Suspense } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
-import { lazy } from '@loadable/component'
+
+import Search from "./Components/Search";
+// import CropList from "./Components/CropList";
 import "./App.css";
 
 const App = () => {
-
   // dark theme logic
+
   const theme = useContext(ThemeContext);
 
   const darkMode = theme.state.darkMode;
@@ -22,18 +24,15 @@ const App = () => {
     }
   };
   console.log(darkMode);
-  const Home = lazy(()=>import ("./Components/Home"));
+
   return (
     <>
       <div
         style={{ margin: 0, padding: 0 }}
         className={darkMode ? "dark" : "light"}
       >
-        <p>HELLO WORLD</p>
-       <Suspense fallback={<h1>Loading...</h1>}>
-       <Home />
-       </Suspense>
-       
+        <h1>TESTING</h1>
+        <Search />
       </div>
       <button onClick={handleClick}>Click me</button>
     </>
