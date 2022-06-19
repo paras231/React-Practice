@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, Suspense } from "react";
+import Testing3 from "./Components/Testing3";
 import { ThemeContext } from "./Context/ThemeContext";
-
+import Fetching from "./Components/Fetching";
+import HooksPractice from "./Components/HooksPractice";
 import Search from "./Components/Search";
 // import CropList from "./Components/CropList";
 import "./App.css";
@@ -31,8 +33,7 @@ const App = () => {
         style={{ margin: 0, padding: 0 }}
         className={darkMode ? "dark" : "light"}
       >
-        <h1>TESTING</h1>
-        <Search />
+       <Fetching />
       </div>
       <button onClick={handleClick}>Click me</button>
     </>

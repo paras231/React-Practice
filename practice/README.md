@@ -13,3 +13,7 @@ Created this app to get practice of followins->
 6. Added important  Search feature using array filter.
 
 7. Used debouncing in search feature.
+
+8. Used swr npm package to fetch data from the server.
+
+9. swr is really useful when you have to fetch data from the server without any delay and it gives many options.

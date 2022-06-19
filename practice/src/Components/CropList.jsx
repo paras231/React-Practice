@@ -40,6 +40,7 @@ const CropList = () => {
     setFilteredCrops(
       data.filter((crop) =>
         crop.cropName?.toLowerCase().includes(query.toLowerCase())
+        
       )
     );
   }, 2000);
